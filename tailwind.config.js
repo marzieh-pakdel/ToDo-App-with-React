@@ -8,11 +8,11 @@ export default {
   theme: {
     extend: {
       colors : {
-        "primary-color" : "#EA5959",
-        "dark-gray-text" : "#525252",
-        "gray1" : "#F3F3F3",
-        "gray2" : "#B5B5B5",
-        "gray3" : "#525252",
+        "primary-color" : "#d6eaf8",
+        "card-bg-color" : "#f8f9f9",
+        "placeholder" : "#1f618d",
+        "light-blue" : "#ebf5fb",
+        "tag-bg" : "#2874a6 ",
       },
 
       boxShadow: {

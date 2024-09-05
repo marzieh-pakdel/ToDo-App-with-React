@@ -1,6 +1,6 @@
 const Content = ({children}) => {
   return (
-    <section className="px-14 pt-8">{children}</section>
+    <section className="px-20  pt-8">{children}</section>
   )
 }
 

@@ -1,6 +1,10 @@
-const Button = ({buttonStyle, title}) => {
+const Button = ({
+  buttonStyle, 
+  title, 
+  ...props
+}) => {
   return (
-    <button className={buttonStyle}>{title}</button>
+    <button className={buttonStyle} {...props}>{title}</button>
   )
 }
 
