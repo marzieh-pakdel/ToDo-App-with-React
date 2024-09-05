@@ -11,6 +11,7 @@ export default {
         "primary-color" : "#EA5959",
         "dark-gray-text" : "#525252",
         "gray1" : "#F3F3F3",
+        "gray2" : "#B5B5B5",
       },
 
       boxShadow: {
