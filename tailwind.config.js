@@ -12,6 +12,7 @@ export default {
         "dark-gray-text" : "#525252",
         "gray1" : "#F3F3F3",
         "gray2" : "#B5B5B5",
+        "gray3" : "#525252",
       },
 
       boxShadow: {
