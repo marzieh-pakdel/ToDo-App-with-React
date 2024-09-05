@@ -1,6 +1,6 @@
-const Button = ({buttonStyle}) => {
+const Button = ({buttonStyle, title}) => {
   return (
-    <button className={buttonStyle}></button>
+    <button className={buttonStyle}>{title}</button>
   )
 }
 

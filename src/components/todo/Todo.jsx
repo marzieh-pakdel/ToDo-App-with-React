@@ -1,6 +1,11 @@
-const Todo = () => {
+import Input from "../common/input/Input"
+
+const Todo = ({todo}) => {
   return (
-    <div></div>
+    <div>
+        <Input type="checkbox" />
+        <h2>{todo}</h2>
+    </div>
   )
 }
 
