@@ -1,10 +1,21 @@
 import Input from "../common/input/Input"
 
-const Todo = ({todo}) => {
+const Todo = ({todos}) => {
   return (
-    <div>
-        <Input type="checkbox" />
-        <h2>{todo}</h2>
+    <div className="flex flex-col gap-4 mt-10 px-2">
+      {
+        todos.map((todo) => {
+          return (
+            <span 
+              key={new Date().getTime} 
+              className="flex justify-start items-center gap-2"
+            >
+                <Input type="checkbox" />
+                <h2>{todo.todo}</h2>
+            </span>
+          )
+        })
+      }
     </div>
   )
 }

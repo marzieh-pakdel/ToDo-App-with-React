@@ -19,7 +19,7 @@ const router = createBrowserRouter ([
   {
     path: "/filteredTasks",
     element: <FilteredTasks />,
-    errorElement: <NotFound />,
+    // errorElement: <NotFound />,
     children: [
       {
         path: "groceries",

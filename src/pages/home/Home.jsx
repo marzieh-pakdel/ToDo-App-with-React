@@ -3,7 +3,7 @@ import Button from "../../components/common/button/Button"
 import Input from "../../components/common/input/Input"
 import Layout from "../../components/layout/Layout"
 import Tags from "../../components/tags/Tags"
-// import Todo from "../../components/todo/Todo"
+import Todo from "../../components/todo/Todo"
 import { IoIosAddCircle } from "react-icons/io";
 
 const Home = () => {
@@ -22,14 +22,16 @@ const Home = () => {
 
     console.log(todos)
 
-    // useEffect(() => {
-    //     const storedTodos = JSON.parse(localStorage.getItem("todo")) || [];
-    //     setTodos(storedTodos);
-    // }, [])
+    useEffect(() => {
+        const storedTodos = localStorage.getItem("todo");
+        if (storedTodos) {
+            setTodos(JSON.parse(storedTodos));
+        }
+    }, [])
 
-    // useEffect(() => {
-    //     localStorage.setItem("todo", JSON.stringify(todos));
-    // }, [todos])
+    useEffect(() => {
+        localStorage.setItem("todo", JSON.stringify(todos));
+    }, [todos])
 
     return (
         <Layout>
@@ -50,7 +52,7 @@ const Home = () => {
                     buttonStyle="flex justify-center items-center border-2 border-dashed border-tag-bg p-4 rounded-md text-tag-bg" 
                 />
             </div>
-            {/* <Todo /> */}
+            <Todo todos={todos} />
         </Layout>
     )
 }
