@@ -5,7 +5,7 @@ const Card = ({children}) => {
   return (
     <section className="bg-white flex shadow-card-box-shadow rounded-[8px]">
       <Sidebar />
-      <div className="border border-tag-bg border-solid h-" ></div>
+      <div className="border border-light-blue border-solid h-" ></div>
       <Content>{children}</Content>
     </section>
   )

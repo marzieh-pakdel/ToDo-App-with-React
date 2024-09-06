@@ -22,17 +22,14 @@ const Home = () => {
 
     console.log(todos)
 
-    useEffect(() => {
-        localStorage.getItem("todo")
-    }, [])
+    // useEffect(() => {
+    //     const storedTodos = JSON.parse(localStorage.getItem("todo")) || [];
+    //     setTodos(storedTodos);
+    // }, [])
 
-    useEffect(() => {
-        localStorage.setItem("todo", inputValue)
-    }, [inputValue])
-    // ye useEffect bezar ke to dependencish inputValue bashe va ba taghire un 
-    // to localstorage todo ha ro save kone.
-    // ye useEffect dige bezar ba dependency khali ke be mahz mount shodan
-    // az localStorage getItem kone va maghdir ro to component Todo pass bede.
+    // useEffect(() => {
+    //     localStorage.setItem("todo", JSON.stringify(todos));
+    // }, [todos])
 
     return (
         <Layout>
@@ -43,9 +40,9 @@ const Home = () => {
                         type="text" 
                         placeholder="Add a new task"
                         onChange={(e) => setInputValue(e.target.value)}
-                        inputStyle="bg-light-blue focus:outline-none rounded-[8px] py-3 pl-6 pr-48 placeholder:text-placeholder"
+                        inputStyle="bg-primary-color focus:outline-none rounded-[8px] py-3 pl-6 pr-48 placeholder:text-placeholder"
                     />
-                    <Tags/>
+                    <Tags setCategory={setCategory}/>
                 </div>
                 <Button 
                     title={<><IoIosAddCircle size={24} /> Add</>} 
