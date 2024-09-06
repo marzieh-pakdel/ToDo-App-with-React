@@ -9,17 +9,18 @@ import { IoIosAddCircle } from "react-icons/io";
 const Home = () => {
     const [inputValue, setInputValue] = useState("")
     const [category, setCategory] = useState("")
-    const [task, setTask] = useState({id:"", todo:"", category:""})
     const [todos, setTodos] = useState([])
 
     function addTodo () {
-        if(inputValue.trim()) {
-            setTask({id: inputValue, todo:inputValue, category:category || "Uncategorized"})
-            const newTodos = [...todos, task]
-            setTodos(newTodos)
+        if (inputValue.trim()) {
+            const newTask = { id: Date.now(), todo: inputValue, category: category || "uncategorized" };
+            const newTodos = [...todos, newTask];
+            setTodos(newTodos);
+            setInputValue("");
         }
     }
 
+    console.log(inputValue)
     console.log(todos)
 
     useEffect(() => {
@@ -43,6 +44,7 @@ const Home = () => {
                         placeholder="Add a new task"
                         onChange={(e) => setInputValue(e.target.value)}
                         inputStyle="bg-primary-color focus:outline-none rounded-[8px] py-3 pl-6 pr-48 placeholder:text-placeholder"
+                        value = {inputValue}
                     />
                     <Tags setCategory={setCategory}/>
                 </div>

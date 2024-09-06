@@ -7,7 +7,7 @@ const Todo = ({todos}) => {
         todos.map((todo) => {
           return (
             <span 
-              key={new Date().getTime} 
+              key={todo.id} 
               className="flex justify-start items-center gap-2"
             >
                 <Input type="checkbox" />
