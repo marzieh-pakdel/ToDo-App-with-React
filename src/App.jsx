@@ -58,7 +58,7 @@ const Home = () => {
                     buttonStyle="flex justify-center items-center border-2 border-dashed border-tag-bg p-4 rounded-md text-tag-bg" 
                 />
             </div>
-            <Todo todos={todos} />
+            <Todo todos={todos} setTodos={setTodos} />
         </Layout>
     )
 }
