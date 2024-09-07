@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import Button from "../../components/common/button/Button"
 import Input from "../../components/common/input/Input"
 import Layout from "../../components/layout/Layout"
@@ -10,6 +10,7 @@ const Home = () => {
     const [inputValue, setInputValue] = useState("")
     const [category, setCategory] = useState("")
     const [todos, setTodos] = useState([])
+    const tagsRef = useRef(null);
 
     function addTodo () {
         if (inputValue.trim()) {
@@ -18,20 +19,26 @@ const Home = () => {
             setTodos(newTodos);
             setInputValue("");
         }
+
+        if (tagsRef.current) {
+            tagsRef.current.resetCategory();
+        }
     }
 
     console.log(inputValue)
     console.log(todos)
 
     useEffect(() => {
-        const storedTodos = localStorage.getItem("todo");
+        const storedTodos = localStorage.getItem("todos");
         if (storedTodos) {
             setTodos(JSON.parse(storedTodos));
         }
     }, [])
 
     useEffect(() => {
-        localStorage.setItem("todo", JSON.stringify(todos));
+        if (todos.length > 0) {
+            localStorage.setItem("todos", JSON.stringify(todos)); 
+        }
     }, [todos])
 
     return (
@@ -46,7 +53,7 @@ const Home = () => {
                         inputStyle="bg-primary-color focus:outline-none rounded-[8px] py-3 pl-6 pr-48 placeholder:text-placeholder"
                         value = {inputValue}
                     />
-                    <Tags setCategory={setCategory}/>
+                    <Tags setCategory={setCategory} ref={tagsRef}/>
                 </div>
                 <Button 
                     title={<><IoIosAddCircle size={24} /> Add</>} 
