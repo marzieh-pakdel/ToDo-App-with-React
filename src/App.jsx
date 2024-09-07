@@ -18,6 +18,7 @@ const App = () => {
             const newTodos = [...todos, newTask];
             setTodos(newTodos);
             setInputValue("");
+            setCategory("")
         }
 
         if (tagsRef.current) {

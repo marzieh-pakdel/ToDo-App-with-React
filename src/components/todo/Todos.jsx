@@ -15,14 +15,14 @@ const Todos = ({todos, setTodos}) => {
   
   function deleteTodo (removedTodoId) {
     const updatedTodos = todos.filter((todo) => {
-      todo.id !== removedTodoId
-  })
+        todo.id !== removedTodoId
+    })
     setTodos(updatedTodos)
     localStorage.setItem("todos", JSON.stringify(updatedTodos))
   }
 
   return (
-    <div className="flex flex-col gap-4 mt-10">
+    <div className="flex flex-col gap-4 mt-10 overflow-auto">
       {
         todos.map((todo) => {
           return (
