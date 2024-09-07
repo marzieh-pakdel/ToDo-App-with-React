@@ -25,9 +25,6 @@ const Home = () => {
         }
     }
 
-    console.log(inputValue)
-    console.log(todos)
-
     useEffect(() => {
         const storedTodos = localStorage.getItem("todos");
         if (storedTodos) {
