@@ -15,7 +15,7 @@ const Todos = ({todos, setTodos}) => {
   
   function deleteTodo (removedTodoId) {
     const updatedTodos = todos.filter((todo) => {
-        todo.id !== removedTodoId
+      return todo.id !== removedTodoId
     })
     setTodos(updatedTodos)
     localStorage.setItem("todos", JSON.stringify(updatedTodos))
@@ -50,7 +50,7 @@ const Todos = ({todos, setTodos}) => {
                 />
             </span>
             <RiDeleteBin5Line 
-              onClick={(todo) => deleteTodo(todo.id)} 
+              onClick={() => deleteTodo(todo.id)} 
               color="red" 
               size={20} 
               style={checkedTodos[todo.id] ? {display:"none"} : {cursor: 'pointer' }} 
