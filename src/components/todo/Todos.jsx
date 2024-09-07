@@ -13,9 +13,9 @@ const Todos = ({todos, setTodos}) => {
     }));
   }
   
-  function deleteTodo (removedTodoId) {
+  function deleteTodo (removeTodoId) {
     const updatedTodos = todos.filter((todo) => {
-      return todo.id !== removedTodoId
+      return todo.id !== removeTodoId
     })
     setTodos(updatedTodos)
     localStorage.setItem("todos", JSON.stringify(updatedTodos))
