@@ -9,7 +9,7 @@ const Todos = ({todos, setTodos}) => {
   function handleCheckboxChange(e, todoId) {
     setCheckedTodos((prev) => ({
       ...prev,
-      [todoId]: e.target.checked
+      [todoId] : e.target.checked
     }));
   }
   
