@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Home from './pages/home/Home.jsx'
+import Home from './App.jsx'
 import FilteredTasks from './pages/filteredTasks/filteredTasks.jsx'
 import NotFound from './pages/404/NotFound.jsx'
 import Groceries from './pages/groceries/Groceries.jsx'
