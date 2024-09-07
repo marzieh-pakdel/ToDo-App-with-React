@@ -14,6 +14,7 @@ export default {
         "light-blue" : "#aed6f1",  
         "tag-bg" : "#5499c7",
         "selected-tag": "#1a5276",
+        "done-task": "#f8f9f9",
       },
 
       boxShadow: {
