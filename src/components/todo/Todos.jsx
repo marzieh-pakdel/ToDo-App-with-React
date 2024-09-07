@@ -3,7 +3,7 @@ import Button from "../common/button/Button"
 import Input from "../common/input/Input"
 import { RiDeleteBin5Line } from "react-icons/ri";
 
-const Todo = ({todos, setTodos}) => {
+const Todos = ({todos, setTodos}) => {
   const [checkedTodos, setCheckedTodos] = useState({});
 
   function handleCheckboxChange(e, todoId) {
@@ -63,4 +63,4 @@ const Todo = ({todos, setTodos}) => {
   )
 }
 
-export default Todo
+export default Todos

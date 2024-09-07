@@ -3,7 +3,7 @@ import Button from "./components/common/button/Button"
 import Input from "./components/common/input/Input"
 import Layout from "./components/layout/Layout"
 import Tags from "./components/tags/Tags"
-import Todo from "./components/todo/Todos"
+import Todos from "./components/todo/Todos"
 import { IoIosAddCircle } from "react-icons/io";
 
 const App = () => {
@@ -58,7 +58,7 @@ const App = () => {
                     buttonStyle="flex justify-center items-center border-2 border-dashed border-tag-bg p-4 rounded-md text-tag-bg" 
                 />
             </div>
-            <Todo todos={todos} setTodos={setTodos} />
+            <Todos todos={todos} setTodos={setTodos} />
         </Layout>
     )
 }
