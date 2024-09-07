@@ -1,6 +1,8 @@
 const College = () => {
   return (
-    <div>College</div>
+    <div>
+      
+    </div>
   )
 }
 
