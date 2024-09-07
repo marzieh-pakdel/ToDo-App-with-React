@@ -6,7 +6,7 @@ import Tags from "./components/tags/Tags"
 import Todo from "./components/todo/Todo"
 import { IoIosAddCircle } from "react-icons/io";
 
-const Home = () => {
+const App = () => {
     const [inputValue, setInputValue] = useState("")
     const [category, setCategory] = useState("")
     const [todos, setTodos] = useState([])
@@ -63,4 +63,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default App

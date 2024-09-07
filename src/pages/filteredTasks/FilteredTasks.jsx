@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom"
-import Layout from '../../components/layout/Layout'
+import Layout from "../../components/layout/Layout"
 
-const FilteredTasks = () => {
+const FilteredTasks = ({children}) => {
   return (
     <Layout>
-        <div>filteredTasks</div>
+      {children}
         <Outlet />   
     </Layout>
   )

@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Home from './App.jsx'
-import FilteredTasks from './pages/filteredTasks/filteredTasks.jsx'
+import App from './App.jsx'
+import FilteredTasks from './pages/filteredTasks/FilteredTasks.jsx'
 import NotFound from './pages/404/NotFound.jsx'
 import Groceries from './pages/groceries/Groceries.jsx'
 import College from './pages/college/College.jsx'
@@ -13,13 +13,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 const router = createBrowserRouter ([
   {
     path: "/",
-    element: <Home />,
+    element: <App />,
     errorElement: <NotFound />
   },
   {
     path: "/filteredTasks",
     element: <FilteredTasks />,
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "groceries",
