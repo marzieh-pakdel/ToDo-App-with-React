@@ -10,7 +10,7 @@ const Todo = ({todos, setTodos}) => {
     })
 
     setTodos(updatedTodos)
-    
+
     localStorage.setItem("todos", JSON.stringify(updatedTodos))
   }
 
@@ -30,10 +30,15 @@ const Todo = ({todos, setTodos}) => {
                 <h2>{todo.todo}</h2>
                 <Button 
                   title={todo.category}
-                  buttonStyle="bg-tag-bg text-white rounded-[4px] py-1 px-8 text-xs font-normal"
+                  buttonStyle="bg-tag-bg text-white rounded-[4px] py-1 px-8 text-xs font-normal cursor-default"
                 />
             </span>
-            <RiDeleteBin5Line onClick={(todo) => deleteTodo(todo.id)} color="red" size={20} />
+            <RiDeleteBin5Line 
+              onClick={(todo) => deleteTodo(todo.id)} 
+              color="red" 
+              size={20} 
+              style={{ cursor: 'pointer' }} 
+            />
             </div>
           )
         })
