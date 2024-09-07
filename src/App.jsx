@@ -25,6 +25,8 @@ const Home = () => {
         }
     }
 
+    console.log(tagsRef.current)
+
     useEffect(() => {
         const storedTodos = localStorage.getItem("todos");
         if (storedTodos) {
