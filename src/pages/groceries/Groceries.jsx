@@ -1,4 +1,4 @@
-import Todos from "../../components/todo/Todos"
+import Todos from "../../components/todos/Todos"
 import { useEffect, useState} from "react";
 
 const Groceries = () => {

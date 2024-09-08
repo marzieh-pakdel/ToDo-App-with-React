@@ -1,4 +1,4 @@
-import Todos from "../../components/todo/Todos"
+import Todos from "../../components/todos/Todos"
 
 const College = () => {
   return (

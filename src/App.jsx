@@ -3,7 +3,7 @@ import Button from "./components/common/button/Button"
 import Input from "./components/common/input/Input"
 import Layout from "./components/layout/Layout"
 import Tags from "./components/tags/Tags"
-import Todos from "./components/todo/Todos"
+import Todos from "./components/todos/Todos"
 import { IoIosAddCircle } from "react-icons/io";
 
 const App = () => {
